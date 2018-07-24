@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number_of_tasks: 1
+  name: MyString
+  course: one
+
+two:
+  number_of_tasks: 1
+  name: MyString
+  course: two
