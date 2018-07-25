@@ -1,4 +1,4 @@
 <h1>Welcome to your courses!</h1>
 <% @courses.each do |course| %>
-<%= link_to course.name, course_challenges_path(course.id) %>
+<%= link_to course.name, student_course_challenges_path(current_student.id, course.id) %>
 <% end %>
