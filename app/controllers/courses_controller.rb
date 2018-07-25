@@ -18,6 +18,7 @@ class CoursesController < ApplicationController
 
   def create
     @course = Course.new(course_params)
+    authorize @course
     if !@course.save
       flash[:notice] = 'Course was not saved'
       #Add redirect?
@@ -25,10 +26,12 @@ class CoursesController < ApplicationController
   end
 
   def update
+    authorize @course
     @course.update(course_params)
   end
 
   def destroy
+    authorize @course
     @course.destroy
   end
 

@@ -17,6 +17,7 @@ class ChallengesController < ApplicationController
 
   def create
     @challenge = Challenge.new(challenge_params)
+    authorize @challenge
     if !@challenge.save
       flash[:notice] = 'challenge was not saved'
       #Add redirect?
@@ -24,10 +25,12 @@ class ChallengesController < ApplicationController
   end
 
   def update
+    authorize @challenge
     @challenge.update(challenge_params)
   end
 
   def destroy
+    authorize @challenge
     @challenge.destroy
   end
 

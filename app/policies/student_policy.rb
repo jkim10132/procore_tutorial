@@ -6,7 +6,7 @@ class StudentPolicy < ApplicationPolicy
     @student = student
   end
 
-  def update?
+  def destroy?
     user.admin?
   end
 end

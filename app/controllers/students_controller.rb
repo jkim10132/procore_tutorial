@@ -28,6 +28,7 @@ class StudentsController < ApplicationController
   end
 
   def destroy
+    authorize @student
     @student.destroy
   end
 
