@@ -24,6 +24,8 @@ class CoursesController < ApplicationController
   end
 
   def destroy
-
+    @course.destroy
   end
+
+  private
 end
