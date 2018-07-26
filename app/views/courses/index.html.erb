@@ -2,3 +2,5 @@
 <% @courses.each do |course| %>
 <%= link_to course.name, student_course_challenges_path(current_student.id, course.id) %>
 <% end %>
+
+<app :message = <%= "wets".to_json %>></app>

@@ -6,6 +6,11 @@ git_source(:github) do |repo_name|
 end
 gem 'omniauth-google-oauth2'
 
+
+#VueJS
+gem 'webpacker'
+gem 'foreman'
+
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
