@@ -1,5 +1,9 @@
 <h1>Welcome to your courses!</h1>
 <% @courses.each do |course| %>
+	<%if @post.errors.any?  %>
+		<h2> Errors encountered!</h2>
+	<% end %>
+	
 	<h2> <%=course.name%> </h2>
 	<%= link_to course.name, student_course_challenges_path(current_student.id, course.id) %>
 <% end %>
