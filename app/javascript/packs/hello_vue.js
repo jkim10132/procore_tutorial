@@ -47,6 +47,7 @@
 import Vue from 'vue/dist/vue.esm'
 import App from '../App.vue'
 import Table from '../Table.vue'
+import ChallengeList from '../ChallengeList.vue'
 
 Vue.config.productionTip = false
 
@@ -57,12 +58,21 @@ import 'vue-material/dist/theme/default.css'
 Vue.use(VueMaterial)
 Vue.component("app", App)
 Vue.component("samar",Table)
+Vue.component("nini", ChallengeList)
 
 document.addEventListener('DOMContentLoaded', () => {
 	const app =new Vue({
 	  el: '[data-behavior="vue"]'
 	});
 })
+
+
+
+
+
+
+
+
 
 
 
