@@ -34,6 +34,6 @@ class ChallengesController < ApplicationController
   private
 
   def challenge_params
-    params[:challenge].permit(:name, :number_of_tasks)
+    params[:challenge].permit(:name, :course_id, :number_of_tasks, :filepath)
   end
 end
