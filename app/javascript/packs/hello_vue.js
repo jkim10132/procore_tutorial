@@ -28,16 +28,44 @@
 // Then add this markup to your html template:
 //
 
-import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+// import Vue from 'vue/dist/vue.esm'
+// import App from '../app.vue'
+// import VueMaterial from 'vue-material'
+// import 'vue-material/dist/vue-material.min.css'
+// import 'vue-material/dist/theme/default.css'
 
-Vue.component('app',App)
+
+// Vue.component('app',App)
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const app = new Vue({
+//     el: '[data-behavior="vue"]'
+//   })
+// })
+
+
+import Vue from 'vue/dist/vue.esm'
+import App from '../App.vue'
+import Table from '../Table.vue'
+
+Vue.config.productionTip = false
+
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
+
+Vue.use(VueMaterial)
+Vue.component("app", App)
+Vue.component("samar",Table)
 
 document.addEventListener('DOMContentLoaded', () => {
-  const app = new Vue({
-    el: '[data-behavior="vue"]'
-  })
+	const app =new Vue({
+	  el: '[data-behavior="vue"]'
+	});
 })
+
+
+
 //
 //
 //
