@@ -1,3 +1,7 @@
-<% @challenges.each do |challenge| %>
-<h1><%= challenge.name %></h1>
+<% @challenge_statuses.each do |challenge_status| %>
+<h1><%= challenge_status.challenge.name %></h1>
+<h2>Completed: <%= challenge_status.status %></h2>
 <% end %>
+
+
+
