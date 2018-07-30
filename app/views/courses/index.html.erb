@@ -1,105 +1,14 @@
   <h1>Welcome to your courses!</h1>
 <div class="card-container">
 <% @courses.each do |course| %>
-  <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://kitt.lewagon.com/placeholder/cities/shanghai');">
-  <div class="card-category"><%= course.name %></div>
-  <div class="card-description">
-    <h2><%= course.challenges.size %></h2>
-    <p></p>
-  </div>
-  <img class="card-user" src="https://visualpharm.com/assets/468/Ruby%20Programming%20Language-595b40b85ba036ed117da9b2.svg">
-  <%= link_to course.name, student_course_challenges_path(current_student.id, course.id), {:class=>"card-link"} %>
-</div>
-
+	<%if @post.errors.any?  %>
+		<h2> Errors encountered!</h2>
+	<% end %>
+	
+	<h2> <%=course.name%> </h2>
+	<%= link_to course.name, student_course_challenges_path(current_student.id, course.id) %>
 <% end %>
-</div>
+
+<% Course.all.each do |course| %>
+	<%= link_to course.name, student_course_add_student_to_course_path(current_student.id, course.id)%>
+<% end %>
