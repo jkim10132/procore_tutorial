@@ -1,29 +1,8 @@
-<h2>Log in</h2>
-
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
-    </div>
-  <% end -%>
-
-  <div class="actions">
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-<%= link_to "Sign in with Google", student_google_oauth2_omniauth_authorize_path %>
-
-
-<%= render "devise/shared/links" %>
+<div class= "center-login">
+  <img src="https://dudodiprj2sv7.cloudfront.net/product-logos/Mo/aC/9PT9T91J851F.JPEG">
+  <button class="core-button core-button--lg core-button--primary">
+      <div class="core-button__label">
+        <%= link_to "Sign in with your Procore Account", student_google_oauth2_omniauth_authorize_path %>
+      </div>
+    </button>
+</div>

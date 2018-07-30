@@ -3,12 +3,17 @@
   <head>
     <title>ProcoreTutorial</title>
     <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://procore-core.global.ssl.fastly.net/latest/core-css/core.css">
+  <link rel="stylesheet" href="https://procore-core.global.ssl.fastly.net/latest/core-icons/icons.css">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'hello_vue' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class = "container" data-behavior="vue">
+      <%= yield %>
+    </div>
   </body>
 </html>
