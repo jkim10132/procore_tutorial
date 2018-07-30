@@ -1,4 +1,7 @@
 <% @challenges.each do |challenge| %>
 <h1><%= challenge.name %></h1>
-<h2><%= @student.challenge_statuses.last.number_of_completed %></h2>
+<h2>Completed: <%= @student.challenge_statuses.last.status%></h2>
 <% end %>
+
+
+
