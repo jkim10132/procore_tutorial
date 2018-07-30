@@ -1,6 +1,6 @@
 class CoursesController < ApplicationController
   def index
-    @courses = current_student.courses.all
+    @courses = current_student.courses.all.uniq
   end
 
   def show

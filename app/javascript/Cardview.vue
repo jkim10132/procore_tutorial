@@ -4,18 +4,17 @@
       <md-ripple>
         <md-card-header>
           <div class="md-title">
-            <h1>{{title}}</h1>
+            <h2>{{title}}</h2>
           </div>
-          <div class="md-subhead">It also have a lol</div>
+          <div class="md-subhead">Click to experience Ruby</div>
         </md-card-header>
 
         <md-card-content>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non.
+          Click here for a free subscription to a comprehensive learning experience!
         </md-card-content>
 
         <md-card-actions>
-          <md-button>Action</md-button>
-          <md-button>Action</md-button>
+          <md-button >Select</md-button>
         </md-card-actions>
       </md-ripple>
     </md-card>
@@ -26,9 +25,11 @@
   .md-card {
     width: 200px;
     margin: 4px;
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
     vertical-align: top;
   }
+
 </style>
 
 <script>
