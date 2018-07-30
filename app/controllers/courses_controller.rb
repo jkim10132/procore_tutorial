@@ -32,9 +32,15 @@ class CoursesController < ApplicationController
     @course.destroy
   end
 
-  private
+  def add_student_to_course
+     Course.find(params[:course_id]).students << Student.find(params[:student_id])
+     redirect_to root_url
+  end
 
+  private
+  
   def course_params
     params[:course].permit(:name, :challenges, :students)
   end
+
 end

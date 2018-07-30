@@ -31,6 +31,10 @@ class StudentsController < ApplicationController
     @student.destroy
   end
 
+  def add_student_to_course(course)    
+    Student.find(params[:id]).courses << course
+  end
+
   private
 
   def student_params
