@@ -1,10 +1,12 @@
 class ChallengesController < ApplicationController
   def index
-    @challenges = Student.find(params[:student_id]).courses.find(params[:course_id]).challenges.all
+    @student = Student.find(params[:student_id])
+    @challenges = @student.courses.find(params[:course_id]).challenges.all
   end
 
   def show
     @challenge = Challenge.find(params[:id])
+    @student = Student.find(params[:student_id])
   end
 
   def new

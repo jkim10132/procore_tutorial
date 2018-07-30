@@ -5,6 +5,7 @@ class Student < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable, omniauth_providers: %i[google_oauth2]
   belongs_to :team, optional: true
   has_many :challenge_statuses
+  has_many :challenges, :through => :challenge_statuses
   has_and_belongs_to_many :courses
 
   def self.from_omniauth(auth)
