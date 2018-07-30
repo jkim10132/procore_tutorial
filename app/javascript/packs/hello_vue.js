@@ -48,6 +48,8 @@ import Vue from 'vue/dist/vue.esm'
 import App from '../App.vue'
 import Table from '../Table.vue'
 import ChallengeList from '../ChallengeList.vue'
+import Cardview from '../Cardview.vue'
+
 
 Vue.config.productionTip = false
 
@@ -57,8 +59,9 @@ import 'vue-material/dist/theme/default.css'
 
 Vue.use(VueMaterial)
 Vue.component("app", App)
-Vue.component("samar",Table)
+Vue.component("bryan",Table)
 Vue.component("nini", ChallengeList)
+Vue.component("justinandbryanforever", Cardview)
 
 document.addEventListener('DOMContentLoaded', () => {
 	const app =new Vue({

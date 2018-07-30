@@ -21,7 +21,7 @@
         <div class="md-toolbar-row">
           <md-tabs class="md-primary">
             <md-tab id="tab-home" md-label="Home"></md-tab>
-            <md-tab id="tab-pages" md-label="Frequest Questions"></md-tab>
+            <md-tab id="tab-pages" md-label="Frequent Questions"></md-tab>
           </md-tabs>
         </div>
       </md-app-toolbar>

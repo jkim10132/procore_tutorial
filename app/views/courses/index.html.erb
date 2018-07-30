@@ -15,14 +15,18 @@
 
 <body>
   <app> </app>
-  <br> <br> <br>
+  <br> <br>
+  <%= @courses.map.each do |course| %>
+  <justinandbryanforever :title=<%= course.name.to_json%>></justinandbryanforever>
+  <%end%>
+<!--   <br> <br> <br>
   <img src="https://dudodiprj2sv7.cloudfront.net/product-logos/Mo/aC/9PT9T91J851F.JPEG" height="85" width="85">
   <br> <br> <br> <br>
   	<h1>ProcoreTutorials!</h1>
   <br>
   	<h2> Classmates</h2>
   <br><br>
-  <samar></samar>
+  <bryan></bryan> -->
 </body>
 </div>
 </html>
