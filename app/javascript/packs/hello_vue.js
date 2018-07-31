@@ -49,6 +49,8 @@ import App from '../App.vue'
 import Table from '../Table.vue'
 import ChallengeList from '../ChallengeList.vue'
 import Cardview from '../Cardview.vue'
+import Progress from '../Progress.vue'
+
 
 
 Vue.config.productionTip = false
@@ -62,10 +64,15 @@ Vue.component("app", App)
 Vue.component("bryan",Table)
 Vue.component("nini", ChallengeList)
 Vue.component("justinandbryanforever", Cardview)
+Vue.component("lol", Progress)
 
 document.addEventListener('DOMContentLoaded', () => {
 	const app =new Vue({
-	  el: '[data-behavior="vue"]'
+	  el: '[data-behavior="vue"]',
+	  data: {
+	  	count: 0,
+	  	showClassmates: 0,
+	  }
 	});
 })
 

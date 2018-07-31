@@ -6,9 +6,9 @@ devise_for :students, :controllers => { :omniauth_callbacks => "students/omniaut
   post 'retrieve_challenge_data' => 'jenkins#retrieve_challenge_data'
 
   resources :students do
-  resources :courses do
-  	get 'add_student_to_course' => 'courses#add_student_to_course'
-  resources :challenges
-    end
+  	resources :courses do
+	  get 'add_student_to_course' => 'courses#add_student_to_course'
+	resources :challenges
+	end
   end
 end
