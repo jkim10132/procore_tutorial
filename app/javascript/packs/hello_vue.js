@@ -43,39 +43,42 @@
 //   })
 // })
 
-
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
 import Vue from 'vue/dist/vue.esm'
 import App from '../App.vue'
 import Table from '../Table.vue'
 import ChallengeList from '../ChallengeList.vue'
 import Cardview from '../Cardview.vue'
+import Progress from '../Progress.vue'
 
 
 Vue.config.productionTip = false
 
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/default.css'
+
 
 Vue.use(VueMaterial)
 Vue.component("app", App)
 Vue.component("bryan",Table)
 Vue.component("nini", ChallengeList)
 Vue.component("justinandbryanforever", Cardview)
+Vue.component("lol", Progress)
+
 
 document.addEventListener('DOMContentLoaded', () => {
 	const app =new Vue({
-	  el: '[data-behavior="vue"]'
+	  el: '[data-behavior="vue"]',
+	  data: {
+	  	count: 1,
+	  },
+	  methods: {
+	  	toggleChallenges: function(x) {
+	  		this.count = x;
+	  	}
+	  }
 	});
 })
-
-
-
-
-
-
-
-
 
 
 

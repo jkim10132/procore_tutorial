@@ -14,7 +14,7 @@
         </md-card-content>
 
         <md-card-actions>
-          <md-button >Select</md-button>
+          <md-button href="http://localhost:3000/students/1/courses/1/challenges">Select</md-button>
         </md-card-actions>
       </md-ripple>
     </md-card>

@@ -1,86 +1,46 @@
 <template>
   <div class="page-container">
-    <md-app md-waterfall md-mode="fixed-last">
-      <md-app-toolbar class="md-large md-dense md-primary">
-        <div class="md-toolbar-row">
-          <div class="md-toolbar-section-start">
-            <md-button class="md-icon-button" @click="menuVisible = !menuVisible">
-              <md-icon>menu</md-icon>
-            </md-button>
-
-            <span class="md-title">~ Challenge Descriptions ~</span>
-          </div>
-
-          <div class="md-toolbar-section-end">
-            <md-button class="md-icon-button">
-              <md-icon>more_vert</md-icon>
-            </md-button>
-          </div>
-        </div>
-
-        <div class="md-toolbar-row">
-          <md-tabs class="md-primary">
-            <md-tab id="tab-home" md-label="Home"></md-tab>
-            <md-tab id="tab-pages" md-label="Frequent Questions"></md-tab>
-          </md-tabs>
-        </div>
+    <md-app>
+      <md-app-toolbar class="md-primary">
+        <span class="md-title">~ Challenge Descriptions ~</span>
       </md-app-toolbar>
 
-      <md-app-drawer :md-active.sync="menuVisible">
-        <md-toolbar class="md-transparent" md-elevation="0">Navigation</md-toolbar>
-
+      <md-app-drawer md-permanent="clipped">
         <md-list>
           <md-list-item>
             <md-icon>assignment</md-icon>
-            <span class="md-list-item-text">Challenge 1</span>
+            <md-button :md-ripple="false" class=" md-list-item-text" v-on:click="count = 1">Challenge 1</md-button>
           </md-list-item>
-
+          <br> <br>
           <md-list-item>
             <md-icon>assignment</md-icon>
-            <span class="md-list-item-text">Challenge 2</span>
+            <md-button :md-ripple="false" class="md-list-item-text" v-on:click="count = 2">Challenge 2</md-button>
           </md-list-item>
-
+          <br> <br>
           <md-list-item>
             <md-icon>assignment</md-icon>
-            <span class="md-list-item-text">Challenge 3</span>
+            <md-button :md-ripple="false" class="md-list-item-text" v-on:click="count = 3">Challenge 3</md-button>
           </md-list-item>
-
+          <br> <br>
           <md-list-item>
             <md-icon>assignment</md-icon>
-            <span class="md-list-item-text">Challenge 4</span>
+            <md-button :md-ripple="false" class="md-list-item-text" v-on:click="count = 4">Challenge 4</md-button>
           </md-list-item>
         </md-list>
       </md-app-drawer>
 
+      
       <md-app-content>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error quibusdam, non molestias et! Earum magnam, similique, quo recusandae placeat dicta asperiores modi sint ea repudiandae maxime? Quae non explicabo, neque.</p>
+      <br> <br> <br> <br>
+      <h3>
+
+      <div v-if="count == 1">HahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahahaHahahahaahahaha</div>
+      <div v-else-if="count == 2">lollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollolloollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br>ollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollollolollol<br></div>
+      <div v-else-if="count == 3">lmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmaolmao</div>
+      <div v-else-if="count == 4"> yoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoy<br>oyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyoyoyoyyo</div>
+      <div v-else>Render the first component again!!!` Render the first component again!!!`Render the first component again!!!`Render the first component again!!!` Render the first component again!!!`Render the first component again!!!`Render the first component again!!!` Render the first component 
+      </div>
+    </h3>
       </md-app-content>
     </md-app>
   </div>
@@ -96,6 +56,9 @@
   .md-drawer {
     width: 230px;
     max-width: calc(100vw - 125px);
+  }
+  .page-container {
+    height: 700px;
   }
 </style>
 
