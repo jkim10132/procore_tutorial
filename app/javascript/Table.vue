@@ -13,8 +13,7 @@
 
       <md-table-empty-state
         md-label="No users found"
-        :md-description="`No user found for this '${search}' query. Try a different search term or create a new user.`">
-        <md-button class="md-primary md-raised" @click="newUser">Create New User</md-button>
+        :md-description="`No user found for this '${search}' query. Try a different search term`">
       </md-table-empty-state>
 
       <md-table-row slot="md-table-row" slot-scope="{ item }">
@@ -46,12 +45,31 @@
       search: null,
       searched: [],
       users: [
-        // {
-        //   id: 1,
-        //   name: "Shawna Dubbin",
-        //   email: "sdubbin0@geocities.com",
-        //   title: "Assistant Media Planner"
-        // }
+        {
+          id: 1,
+          name: "Shawna Dubbin",
+          email: "sdubbin0@geocities.com",
+          title: "Assistant Media Planner"
+        },
+        {
+          id: 2,
+          name: "Justin Kim",
+          email: "sdubbin0@geocities.com",
+          title: "Assistant Media Planner"
+        },
+        {
+          id: 3,
+          name: "Samar Seth",
+          email: "sdubbin0@geocities.com",
+          title: "Assistant Media Planner"
+        },
+        {
+          id: 4,
+          name: "Bryan Dubbin",
+          email: "sdubbin0@geocities.com",
+          title: "Assistant Media Planner"
+        }
+        
       ]
     }),
     methods: {

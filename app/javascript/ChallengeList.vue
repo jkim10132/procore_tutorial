@@ -2,52 +2,28 @@
 
 <template>
   <div class="page-container md-layout-row">
-    <md-app>
+    <md-app id="challenge-layout">
       <md-app-toolbar class="md-primary">
-        <span class="md-title">~ Challenge Descriptions ~</span>
-        <md-button class="md-raised md-accent" v-on:click="showClassmates=1">Show Classmates</md-button>
+        <span class="md-title">{{current_challenge}} </span>
       </md-app-toolbar>
 
       <md-app-drawer md-permanent="full">
-        <md-toolbar class="md-transparent" md-elevation="0">
-          <h2> Select Your Challenge </h2> 
+        <md-toolbar class="md-transparent" md-elevation="0" id="course-name">
+          <h2> {{course_name}} Challenges</h2> 
           <br> <br>
         </md-toolbar>
-
-        <md-list>
-          <md-list-item>
+          <md-list v-for="challenge in challenges">
+          <md-list-item id ="challenge-listing">
             <md-icon>assignment</md-icon>
-            <md-button class="md-primary md-list-item-text" v-on:click="count=1">Challenge 1 <lol> </lol></md-button>
+            <md-button id= "challenge-progress" class="md-primary md-list-item-text" v-on:click="current_chalenge=challenge.name">
+              {{challenge.name}} {{challenge.number_of_completed}} / {{challenge.number_of_tasks}}
+              <lol v-bind:amount = "percentage(challenge.number_of_completed, challenge.number_of_tasks)"> </lol></md-button>
           </md-list-item>
-          <br> <br> <br>
-          <md-list-item>
-            <md-icon>assignment</md-icon>
-            <md-button class="md-primary md-list-item-text" v-on:click="count=2" >Challenge 2 <lol> </lol></md-button>
-          </md-list-item>
-          <br> <br> <br>
-          <md-list-item>
-            <md-icon>assignment</md-icon>
-            <md-button class="md-primary md-list-item-text" v-on:click="count=3">Challenge 3 <lol> </lol></md-button>
-          </md-list-item>
-          <br> <br> <br>
-          <md-list-item>
-            <md-icon>assignment</md-icon>
-            <md-button class="md-primary md-list-item-text" v-on:click="count=4">Challenge 4 <lol> </lol></md-button>
-          </md-list-item>
-          <br> <br> <br> <br> <br> <br> <br> <br>
         </md-list>
       </md-app-drawer>
 
       <md-app-content>
-        <div v-if="count == 1">This is count: {{count}}</div>
-
-        <div v-else-if="count == 2">This is count: {{count}}</div>
-
-        <div v-else-if="count == 3">This is count: {{count}} </div>
-
-        <div v-else-if="count == 4">This is count: {{count}}</div>
-
-        <div v-else>This is count: {{count}}</div>
+        <h1 v-for="challenge in challenges">{{challenge.name}} hi</h1>
       </md-app-content>
     </md-app>
   </div>
@@ -56,10 +32,22 @@
 <script>
   export default {
     name: 'PermanentFull',
+    props: {
+      course_name: String,
+      challenges: Array
+    },
     data:() => ({
-      count: 0,
+      current_challenge: "hi",
       showClassmates: 0,
-    })
+    }),
+    methods:{
+      percentage: function(number_of_completed, number_of_tasks){
+          return Math.round((number_of_completed / number_of_tasks) * 100)
+      },
+      isComplete: function(number_of_completed, number_of_tasks){
+
+      }
+    }
   }
 </script>
 

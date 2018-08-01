@@ -1,6 +1,7 @@
 <template>
   <div>
-   <md-card md-with-hover class="course-card">
+    <a :href="link" id="card-link">
+       <md-card md-with-hover class="course-card" >
       <md-ripple>
         <md-card-header>
           <div class="md-title">
@@ -12,12 +13,10 @@
         <md-card-content>
           Click here for a free subscription to a comprehensive learning experience!
         </md-card-content>
-
-        <md-card-actions>
-          <md-button :href="link">Select</md-button>
-        </md-card-actions>
       </md-ripple>
     </md-card>
+    </a>
+  
   </div>
 </template>
 

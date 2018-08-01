@@ -1,14 +1,14 @@
 <template>
   <div>
-    <md-progress-bar md-mode="determinate" :md-value="amount"></md-progress-bar>
+    <md-progress-bar id = "challenge-progress-bar" md-mode="determinate" :md-value="amount"></md-progress-bar>
   </div>
 </template>
 
 <script>
   export default {
     name: 'ProgressBarDeterminate',
-    data: () => ({
-      amount: 50
-    })
+    props: {
+      amount: Number
+    }
   }
 </script>
