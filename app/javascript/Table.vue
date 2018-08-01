@@ -11,11 +11,11 @@
         </md-field>
       </md-table-toolbar>
 
-      <md-table-empty-state
+      <!-- <md-table-empty-state
         md-label="No users found"
         :md-description="`No user found for this '${search}' query. Try a different search term or create a new user.`">
         <md-button class="md-primary md-raised" @click="newUser">Create New User</md-button>
-      </md-table-empty-state>
+      </md-table-empty-state> -->
 
       <md-table-row slot="md-table-row" slot-scope="{ item }">
         <md-table-cell md-label="ID" md-sort-by="id" md-numeric>{{ item.id }}</md-table-cell>
@@ -46,12 +46,24 @@
       search: null,
       searched: [],
       users: [
-        // {
-        //   id: 1,
-        //   name: "Shawna Dubbin",
-        //   email: "sdubbin0@geocities.com",
-        //   title: "Assistant Media Planner"
-        // }
+        {
+          id: 1,
+          name: "Bryan Lim",
+          email: "bryan@gmail.com",
+          title: "SE Intern"
+        },
+        {
+          id: 2,
+          name: "Justin Kim",
+          email: "justin@gmail.com",
+          title: "SE Intern"
+        },
+        {
+          id: 1,
+          name: "Samar Seth",
+          email: "samar@gmail.com",
+          title: "SE Intern"
+        }
       ]
     }),
     methods: {

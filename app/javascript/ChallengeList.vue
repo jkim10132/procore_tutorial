@@ -1,11 +1,11 @@
-<!-- <div v-if="showClassmates==0"> -->
-
+x
 <template>
   <div class="page-container md-layout-row">
     <md-app>
       <md-app-toolbar class="md-primary">
         <span class="md-title">~ Challenge Descriptions ~</span>
-        <md-button class="md-raised md-accent" v-on:click="showClassmates=1">Show Classmates</md-button>
+        <md-button class="md-raised md-accent" v-on:click="showClassmates=1 ">Show Classmates</md-button>
+        <md-button class="md-raised md-accent" v-on:click="showClassmates=0 ">Hide Classmates</md-button>
       </md-app-toolbar>
 
       <md-app-drawer md-permanent="full">
@@ -39,15 +39,26 @@
       </md-app-drawer>
 
       <md-app-content>
+
+        <div v-if="showClassmates==0">
+
         <div v-if="count == 1">This is count: {{count}}</div>
 
-        <div v-else-if="count == 2">This is count: {{count}}</div>
+        <div v-else-if="count == 2">This is count: {{count}} lol {{showClassmates}} lol</div>
 
         <div v-else-if="count == 3">This is count: {{count}} </div>
 
         <div v-else-if="count == 4">This is count: {{count}}</div>
 
         <div v-else>This is count: {{count}}</div>
+
+        </div>
+
+        <div v-else>
+
+          <bryan> </bryan>
+        </div>
+
       </md-app-content>
     </md-app>
   </div>
@@ -75,6 +86,10 @@
   }
 </style>
 
-<!-- </div> -->
+</div>
+
+<div v-else-if="showClassmates==0">
+</div>
+
 
 
