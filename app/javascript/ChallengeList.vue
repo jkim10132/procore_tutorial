@@ -63,14 +63,14 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .md-app {
     min-height: 350px;
     border: 1px solid rgba(#000, .12);
   }
 
   .md-drawer {
-    width: 230px;
+    width: 1px;
     max-width: calc(100vw - 125px);
   }
 </style>

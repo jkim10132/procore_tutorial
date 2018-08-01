@@ -3,9 +3,13 @@
   <head>
     <title>ProcoreTutorial</title>
     <%= csrf_meta_tags %>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
   <link rel="stylesheet" href="https://procore-core.global.ssl.fastly.net/latest/core-css/core.css">
   <link rel="stylesheet" href="https://procore-core.global.ssl.fastly.net/latest/core-icons/icons.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'hello_vue' %>
@@ -13,6 +17,11 @@
 
   <body>
     <div class = "container" data-behavior="vue">
+      <% if current_student %>
+        <div class="navbar">
+          <app> </app>
+        </div>
+      <% end %>
       <%= yield %>
     </div>
   </body>

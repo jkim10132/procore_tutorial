@@ -1,6 +1,6 @@
 <template>
   <div>
-   <md-card md-with-hover>
+   <md-card md-with-hover class="course-card">
       <md-ripple>
         <md-card-header>
           <div class="md-title">
@@ -14,26 +14,18 @@
         </md-card-content>
 
         <md-card-actions>
-          <md-button href="http://localhost:3000/students/1/courses/1/challenges">Select</md-button>
+          <md-button :href="link">Select</md-button>
         </md-card-actions>
       </md-ripple>
     </md-card>
   </div>
 </template>
 
-<style lang="scss" scoped>
-  .md-card {
-    width: 200px;
-    margin: 4px;
-    display: inline-flex;
-    justify-content: center;
-    vertical-align: top;
-  }
-
-</style>
-
 <script>
 export default {
-  props: ['title']
+  props: {
+    title: String,
+    link: String
+  }
 }
 </script>

@@ -14,6 +14,8 @@ class JenkinsController < ApplicationController
       challenge_status.update(number_of_completed: successes)
       challenge_status.save!
     end
+    binding.pry
+    render :js => "updateUsers();"
     head :ok
   end
 

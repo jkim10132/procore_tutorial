@@ -1,33 +1,15 @@
-
-<!DOCTYPE html>
-
-<div align="center">
-<html>
-
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
-    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,500,700,400italic|Material+Icons">
-    <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default.css">
-</head>
-
-<body>
-  <app> </app>
-  <br> <br>
-  <%= @courses.map.each do |course| %>
-  <justinandbryanforever :title=<%= course.name.to_json%>></>
-  <%end%>
-<!--   <br> <br> <br>
-  <img src="https://dudodiprj2sv7.cloudfront.net/product-logos/Mo/aC/9PT9T91J851F.JPEG" height="85" width="85">
-  <br> <br> <br> <br>
-  	<h1>ProcoreTutorials!</h1>
-  <br>
-  	<h2> Classmates</h2>
-  <br><br>
-  <bryan></bryan> -->
-</body>
+<div class="course-layout">
+  <div class = "profile-bar">
+    <img class="custom-avatar" src="https://mustafaabban.weebly.com/uploads/2/4/1/8/24184166/1382059297.png">
+    <h1>Mustafa Abban</h1>
+    <h2>Born and Raised LA. Lakers Baby!</h2>
+  </div>
+  <div class = "course-list">
+    <body>
+      <br> <br>
+      <% @courses.map.each do |course| %>
+      <justinandbryanforever :title = <%= course.name.to_json%> v-bind:link = <%=student_course_challenges_path(current_student.id, course.id).to_json%>></justinandbryanforever>
+      <%end%>
+    </body>
+  </div>
 </div>
-</html>
-

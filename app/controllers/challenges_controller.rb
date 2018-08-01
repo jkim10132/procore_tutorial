@@ -1,10 +1,17 @@
 class ChallengesController < ApplicationController
   def index
     @student = Student.find(params[:student_id])
-    @challenges = @student.courses.find(params[:course_id]).challenges.all
+    @course = @student.courses.find(params[:course_id])
+    @challenges = @course.challenges.all
     @challenge_statuses = @student.challenge_statuses
   end
-
+  def updateChallenges
+    @student = Student.find(params[:student_id])
+    @course = @student.courses.find(params[:course_id])
+    @challenges = @course.challenges.all
+    @challenge_statuses = @student.challenge_statuses
+    render json: {status: 'SUCCESS', messasge: 'LOADED QUATERLY INVOICES', data: @challenges}, status: :ok
+  end
   def show
     @challenge = Challenge.find(params[:id])
     @student = Student.find(params[:student_id])

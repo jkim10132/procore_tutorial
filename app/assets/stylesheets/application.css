@@ -13,3 +13,37 @@
  *= require_tree .
  *= require_self
  */
+body{
+  max-width: 100vw;
+}
+.navbar{
+  max-height:30vh;
+  height: 80px;
+  max-width: 100vw;
+  background-color: orange;
+}
+.navbar .navbar-content{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+#navbar-button{
+  font-size: .1em;
+}
+.md-avatar.md-theme-default.md-avatar-icon{
+  max-width:400px;
+  min-width: 400px !important;
+  width:100%;
+  background-color: transparent !important;
+  border-right: 1px solid black;
+  border-radius: 0px !important;
+}
+.md-avatar img{
+  width: 50%;
+}
+.md-progress-bar.md-theme-default.md-determinate .md-progress-bar-fill{
+    background-color: #F47E42 !important;
+  }
+.md-progress-bar.md-theme-default.md-determinate{
+    background-color: grey !important;
+  }

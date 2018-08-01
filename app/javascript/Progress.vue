@@ -12,9 +12,3 @@
     })
   }
 </script>
-
-<style lang="scss" scoped>
-  .md-progress-bar {
-    margin: 24px;
-  }
-</style>

@@ -8,7 +8,8 @@ devise_for :students, :controllers => { :omniauth_callbacks => "students/omniaut
   resources :students do
   	resources :courses do
 	  get 'add_student_to_course' => 'courses#add_student_to_course'
-	resources :challenges
+	  resources :challenges
+    get 'updateChallenges' => 'challenges#index_get'
 	end
   end
 end

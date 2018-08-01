@@ -56,9 +56,9 @@ import Progress from '../Progress.vue'
 Vue.config.productionTip = false
 
 import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/default.css'
-
+// import 'vue-material/dist/vue-material.min.css'
+// import 'vue-material/dist/theme/default.css'
+import TurbolinksAdapter from 'vue-turbolinks';
 Vue.use(VueMaterial)
 Vue.component("app", App)
 Vue.component("bryan",Table)
@@ -66,13 +66,23 @@ Vue.component("nini", ChallengeList)
 Vue.component("justinandbryanforever", Cardview)
 Vue.component("lol", Progress)
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbolinks:load', () => {
 	const app =new Vue({
 	  el: '[data-behavior="vue"]',
 	  data: {
 	  	count: 0,
 	  	showClassmates: 0,
-	  }
+	  },
+    methods: {
+    updateUsers: function(student_id,course_id) {
+      axios.get('/students/${student_id}/courses/${course_id}/updateChallenges')
+        .then(function(response) {
+          alert();
+          debugger;
+        })
+        .catch(function(error) { console.log("error"); })
+    }
+  }
 	});
 })
 
