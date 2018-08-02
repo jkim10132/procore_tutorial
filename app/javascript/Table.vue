@@ -17,10 +17,8 @@
       </md-table-empty-state>
 
       <md-table-row slot="md-table-row" slot-scope="{ item }">
-        <md-table-cell md-label="ID" md-sort-by="id" md-numeric>{{ item.id }}</md-table-cell>
-        <md-table-cell md-label="Name" md-sort-by="name">{{ item.name }}</md-table-cell>
-        <md-table-cell md-label="Email" md-sort-by="email">{{ item.email }}</md-table-cell>
-        <md-table-cell md-label="Job Title" md-sort-by="title">{{ item.title }}</md-table-cell>
+        <md-table-cell md-label="Number Of Completed" md-sort-by="id" md-numeric>{{ item.number_of_completed }}</md-table-cell>
+        <md-table-cell md-label="Email" md-sort-by="name">{{ item.name }}</md-table-cell>
       </md-table-row>
     </md-table>
   </div>
@@ -41,35 +39,14 @@
 
   export default {
     name: 'TableSearch',
+    props:{
+      challenges: Object,
+      total: Number
+    },
     data: () => ({
       search: null,
       searched: [],
-      users: [
-        {
-          id: 1,
-          name: "Shawna Dubbin",
-          email: "sdubbin0@geocities.com",
-          title: "Assistant Media Planner"
-        },
-        {
-          id: 2,
-          name: "Justin Kim",
-          email: "sdubbin0@geocities.com",
-          title: "Assistant Media Planner"
-        },
-        {
-          id: 3,
-          name: "Samar Seth",
-          email: "sdubbin0@geocities.com",
-          title: "Assistant Media Planner"
-        },
-        {
-          id: 4,
-          name: "Bryan Dubbin",
-          email: "sdubbin0@geocities.com",
-          title: "Assistant Media Planner"
-        }
-        
+      users: [ 
       ]
     }),
     methods: {
@@ -78,9 +55,29 @@
       },
       searchOnTable () {
         this.searched = searchByName(this.users, this.search)
+      },
+      updateProps: function(new_data){
+          this.challenges = new_data;
       }
     },
     created () {
+      var student_data = this._props.challenges
+      Array.prototype.sum = function (prop) {
+          var total = 0
+          for ( var i = 0, _len = this.length; i < _len; i++ ) {
+              total += this[i][prop]
+          }
+          return total
+      }
+      for (var key in student_data){
+        this.users.push({
+          name: key,
+          number_of_completed: student_data[key].sum("number_of_completed")
+        })
+      }
+      App.challenge = App.cable.subscriptions.create({channel: "ChallengeChannel"}, { received: function(data) {
+          this.updateProps(data.content)
+        }.bind(this)})
       this.searched = this.users
     }
   }

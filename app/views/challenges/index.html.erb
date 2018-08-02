@@ -1,14 +1,9 @@
-<div align="center">
-  <nini :course_name=<%=@course.name.to_json%> :challenges = <%= @challenges_hash.to_json %>> </nini>
+<div align="center" id = "test">
+  <nini :course_name=<%=@course.name.to_json%> :challenges = <%= @challenges_hash.to_json %> :current_student = <%=@current_student.to_json%>> </nini>
 </div>
-
 <hr>
-
 <div>
-  <bryan>
+  <bryan :challenges = <%= @challenges_hash.to_json %> :total= <%= @total %> >
   </bryan>
-
 </div>
-
 <hr>
-

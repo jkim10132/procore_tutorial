@@ -72,17 +72,7 @@ document.addEventListener('turbolinks:load', () => {
 	  data: {
 	  	count: 0,
 	  	showClassmates: 0,
-	  },
-    methods: {
-    updateUsers: function(student_id,course_id) {
-      axios.get('/students/${student_id}/courses/${course_id}/updateChallenges')
-        .then(function(response) {
-          alert();
-          debugger;
-        })
-        .catch(function(error) { console.log("error"); })
-    }
-  }
+	  }
 	});
 })
 

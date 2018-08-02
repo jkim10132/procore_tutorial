@@ -12,7 +12,7 @@
           <h2> {{course_name}} Challenges</h2> 
           <br> <br>
         </md-toolbar>
-          <md-list v-for="challenge in challenges">
+          <md-list v-for="challenge in currentStudent(current_student, challenges)">
           <md-list-item id ="challenge-listing">
             <md-icon>assignment</md-icon>
             <md-button id= "challenge-progress" class="md-primary md-list-item-text" v-on:click="current_chalenge=challenge.name">
@@ -34,7 +34,8 @@
     name: 'PermanentFull',
     props: {
       course_name: String,
-      challenges: Array
+      challenges: Object,
+      current_student: String
     },
     data:() => ({
       current_challenge: "hi",
@@ -45,8 +46,20 @@
           return Math.round((number_of_completed / number_of_tasks) * 100)
       },
       isComplete: function(number_of_completed, number_of_tasks){
-
+          return (number_of_completed == number_of_tasks)
+      },
+      currentStudent: function(id, challenge_statuses){
+        debugger
+          return challenge_statuses[id]
+      },
+      updateProps: function(new_data){
+          this.challenges = new_data;
       }
+    },
+    created: function(){
+        App.challenge = App.cable.subscriptions.create({channel: "ChallengeChannel"}, { received: function(data) {
+          this.updateProps(data.content)
+        }.bind(this)})
     }
   }
 </script>

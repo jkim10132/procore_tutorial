@@ -4,12 +4,13 @@ devise_for :students, :controllers => { :omniauth_callbacks => "students/omniaut
   root to: 'courses#index'
 
   post 'retrieve_challenge_data' => 'jenkins#retrieve_challenge_data'
+  post 'initiate_course' => 'jenkins#initiate_course'
+  mount ActionCable.server => '/cable'
 
   resources :students do
   	resources :courses do
 	  get 'add_student_to_course' => 'courses#add_student_to_course'
 	  resources :challenges
-    get 'updateChallenges' => 'challenges#index_get'
 	end
   end
 end
