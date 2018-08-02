@@ -1,9 +1,34 @@
 class ChallengesController < ApplicationController
   def index
     @student = Student.find(params[:student_id])
-    @challenges = @student.courses.find(params[:course_id]).challenges.all
-    @challenge_statuses = @student.challenge_statuses
+    @course = @student.courses.find(params[:course_id]) || []
+    @challenges_hash = {}
+    @challenges = @course.challenges.all
+    @total = @course.challenges.sum("number_of_tasks")
+    @current_student = @student.name.gsub(" ","-")
+    @course.students.each do |student|
+      challenge_statuses = student.challenge_statuses
+      unless challenge_statuses.empty?
+        @challenges_hash[student.name.gsub(" ","-")] = @challenges.map do |x|
+                                          {
+                                            name: x.name.gsub(" ","-"),
+                                            number_of_tasks: x.number_of_tasks,
+                                            number_of_completed: challenge_statuses.find_by(challenge_id: x.id).number_of_completed
+                                          }
+                                       end
+      end
+    end
   end
+
+
+  def updateChallenges
+    @student = Student.find(params[:student_id])
+    @course = @student.courses.find(params[:course_id])
+    @challenges = @course.challenges.all
+    @challenge_statuses = @student.challenge_statuses
+    render json: {status: 'SUCCESS', messasge: 'LOADED QUATERLY INVOICES', data: @challenges}, status: :ok
+  end
+
 
   def show
     @challenge = Challenge.find(params[:id])

@@ -1,0 +1,177 @@
+/* line 5, /Users/justinkim/procore_tutorial/app/assets/stylesheets/challenges.scss */
+.md-list-item-text * {
+  line-height: 2.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* line 12, /Users/justinkim/procore_tutorial/app/assets/stylesheets/challenges.scss */
+.md-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13em;
+}
+
+/* line 24, /Users/justinkim/procore_tutorial/app/assets/stylesheets/challenges.scss */
+#navbar-button {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 29, /Users/justinkim/procore_tutorial/app/assets/stylesheets/challenges.scss */
+.md-toolbar.md-theme-default.md-primary {
+  background-color: darkgrey;
+}
+
+/* line 34, /Users/justinkim/procore_tutorial/app/assets/stylesheets/challenges.scss */
+#challenge-layout {
+  min-height: 50vh;
+  border-bottom: 2px dotted black;
+}
+
+/* line 39, /Users/justinkim/procore_tutorial/app/assets/stylesheets/challenges.scss */
+#challenge-progress-bar {
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  justify-content: flex-start;
+}
+
+/* line 46, /Users/justinkim/procore_tutorial/app/assets/stylesheets/challenges.scss */
+#challenge-listing {
+  min-height: 40px;
+}
+
+/* line 51, /Users/justinkim/procore_tutorial/app/assets/stylesheets/challenges.scss */
+#course-name {
+  border-bottom: 1px dotted black;
+}
+/* line 4, /Users/justinkim/procore_tutorial/app/assets/stylesheets/courses.scss */
+.course-list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 50px;
+}
+
+/* line 10, /Users/justinkim/procore_tutorial/app/assets/stylesheets/courses.scss */
+.course-card {
+  margin: 10px;
+}
+
+/* line 14, /Users/justinkim/procore_tutorial/app/assets/stylesheets/courses.scss */
+.course-layout {
+  display: flex;
+  height: calc(100vh - 80px);
+}
+
+/* line 19, /Users/justinkim/procore_tutorial/app/assets/stylesheets/courses.scss */
+.profile-bar {
+  min-width: 400px;
+  width: 400px;
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+/* line 32, /Users/justinkim/procore_tutorial/app/assets/stylesheets/courses.scss */
+.profile-bar * {
+  margin: 20px;
+}
+
+/* line 36, /Users/justinkim/procore_tutorial/app/assets/stylesheets/courses.scss */
+.custom-avatar {
+  width: 300px;
+  border-radius: 50%;
+}
+
+/* line 41, /Users/justinkim/procore_tutorial/app/assets/stylesheets/courses.scss */
+#card-link {
+  text-decoration: none;
+}
+
+/* line 45, /Users/justinkim/procore_tutorial/app/assets/stylesheets/courses.scss */
+.md-card {
+  padding: 10px;
+  height: 250px;
+}
+/* line 5, /Users/justinkim/procore_tutorial/app/assets/stylesheets/students.scss */
+.center-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+/* line 11, /Users/justinkim/procore_tutorial/app/assets/stylesheets/students.scss */
+.center-login button {
+  text-align: center;
+  padding: 30px;
+  padding-top: 40px;
+  padding-bottom: 45px;
+  display: flex;
+  border-radius: 8px;
+}
+/* line 19, /Users/justinkim/procore_tutorial/app/assets/stylesheets/students.scss */
+.center-login a {
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+body{
+  max-width: 100vw;
+}
+.navbar{
+  max-height:30vh;
+  height: 80px;
+  max-width: 100vw;
+  background-color: orange;
+}
+.navbar .navbar-content{
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+#navbar-button{
+  font-size: .1em;
+}
+.md-avatar.md-theme-default.md-avatar-icon{
+  max-width:400px;
+  min-width: 400px !important;
+  width:100%;
+  background-color: transparent !important;
+  border-right: 1px solid black;
+  border-radius: 0px !important;
+}
+.md-avatar img{
+  width: 50%;
+}
+.md-progress-bar.md-theme-default.md-determinate .md-progress-bar-fill{
+    background-color: #F47E42 !important;
+  }
+.md-progress-bar.md-theme-default.md-determinate{
+    background-color: grey !important;
+  }

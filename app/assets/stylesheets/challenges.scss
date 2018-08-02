@@ -1,3 +1,53 @@
 // Place all the styles related to the Challenges controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.md-list-item-text * {
+  line-height: 2.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.md-menu{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13em;
+}
+
+.md-menu *{
+}
+
+
+#navbar-button {
+  width: 100%;
+  height: 100%;
+}
+
+.md-toolbar.md-theme-default.md-primary{
+  background-color: darkgrey;
+}
+
+
+#challenge-layout{
+  min-height: 50vh;
+  border-bottom: 2px dotted black;
+}
+
+#challenge-progress-bar{
+  width:100px;
+  min-width: 100px;
+  max-width: 100px;
+  justify-content: flex-start;
+}
+
+#challenge-listing{
+  min-height: 40px;
+}
+
+
+#course-name{
+  border-bottom: 1px dotted black;
+}

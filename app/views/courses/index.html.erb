@@ -1,14 +1,15 @@
-  <h1>Welcome to your courses!</h1>
-<div class="card-container">
-<% @courses.each do |course| %>
-	<%if @post.errors.any?  %>
-		<h2> Errors encountered!</h2>
-	<% end %>
-	
-	<h2> <%=course.name%> </h2>
-	<%= link_to course.name, student_course_challenges_path(current_student.id, course.id) %>
-<% end %>
-
-<% Course.all.each do |course| %>
-	<%= link_to course.name, student_course_add_student_to_course_path(current_student.id, course.id)%>
-<% end %>
+<div class="course-layout">
+  <div class = "profile-bar">
+    <img class="custom-avatar" src="https://mustafaabban.weebly.com/uploads/2/4/1/8/24184166/1382059297.png">
+    <h1>Mustafa Abban</h1>
+    <h2>Born and Raised LA. Lakers Baby!</h2>
+  </div>
+  <div class = "course-list">
+    <body>
+      <br> <br>
+      <% @courses.map.each do |course| %>
+      <justinandbryanforever :title = <%= course.name.to_json%> v-bind:link = <%=student_course_challenges_path(current_student.id, course.id).to_json%>></justinandbryanforever>
+      <%end%>
+    </body>
+  </div>
+</div>

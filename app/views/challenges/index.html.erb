@@ -1,7 +1,9 @@
-<% @challenge_statuses.each do |challenge_status| %>
-<h1><%= challenge_status.challenge.name %></h1>
-<h2>Completed: <%= challenge_status.status %></h2>
-<% end %>
-
-
-
+<div align="center" id = "test">
+  <nini :course_name=<%=@course.name.to_json%> :challenges = <%= @challenges_hash.to_json %> :current_student = <%=@current_student.to_json%>> </nini>
+</div>
+<hr>
+<div>
+  <bryan :challenges = <%= @challenges_hash.to_json %> :total= <%= @total %> >
+  </bryan>
+</div>
+<hr>

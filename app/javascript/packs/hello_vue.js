@@ -28,16 +28,64 @@
 // Then add this markup to your html template:
 //
 
+// import Vue from 'vue/dist/vue.esm'
+// import App from '../app.vue'
+// import VueMaterial from 'vue-material'
+// import 'vue-material/dist/vue-material.min.css'
+// import 'vue-material/dist/theme/default.css'
+
+
+// Vue.component('app',App)
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const app = new Vue({
+//     el: '[data-behavior="vue"]'
+//   })
+// })
+
+
 import Vue from 'vue/dist/vue.esm'
-import App from '../app.vue'
+import App from '../App.vue'
+import Table from '../Table.vue'
+import ChallengeList from '../ChallengeList.vue'
+import Cardview from '../Cardview.vue'
+import Progress from '../Progress.vue'
 
-Vue.component('app',App)
 
-document.addEventListener('DOMContentLoaded', () => {
-  const app = new Vue({
-    el: '[data-behavior="vue"]'
-  })
+
+Vue.config.productionTip = false
+
+import VueMaterial from 'vue-material'
+// import 'vue-material/dist/vue-material.min.css'
+// import 'vue-material/dist/theme/default.css'
+import TurbolinksAdapter from 'vue-turbolinks';
+Vue.use(VueMaterial)
+Vue.component("app", App)
+Vue.component("bryan",Table)
+Vue.component("nini", ChallengeList)
+Vue.component("justinandbryanforever", Cardview)
+Vue.component("lol", Progress)
+
+document.addEventListener('turbolinks:load', () => {
+	const app =new Vue({
+	  el: '[data-behavior="vue"]',
+	  data: {
+	  	count: 0,
+	  	showClassmates: 0,
+	  }
+	});
 })
+
+
+
+
+
+
+
+
+
+
+
 //
 //
 //
